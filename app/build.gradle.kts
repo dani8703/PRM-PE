@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.studentsmanagement_njs1706_se171464"
+    namespace = "com.example.sp25_trandangquocdat_njs1706"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.studentsmanagement_njs1706_se171464"
+        applicationId = "com.example.sp25_trandangquocdat_njs1706"
         minSdk = 29
         targetSdk = 34
         versionCode = 1

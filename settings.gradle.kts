@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "StudentsManagement_NJS1706_SE171464"
+rootProject.name = "SP25_TranDangQuocDat_NJS1706"
 include(":app")
  

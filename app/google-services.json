@@ -1,41 +1,78 @@
 {
   "project_info": {
-    "project_number": "846865138855",
-    "project_id": "chat-app2-38597",
-    "storage_bucket": "chat-app2-38597.appspot.com"
+    "project_number": "12300953490",
+    "project_id": "lab13-bec72",
+    "storage_bucket": "lab13-bec72.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:846865138855:android:4146f8c2e5f8d342c64782",
+        "mobilesdk_app_id": "1:12300953490:android:1e47d8673eecde0da8434b",
         "android_client_info": {
           "package_name": "com.example.studentsmanagement_net1728_se171060"
         }
       },
       "oauth_client": [
         {
-          "client_id": "846865138855-2iscr56dlh7n70qkn6e0ig8f31esmnjv.apps.googleusercontent.com",
+          "client_id": "12300953490-766v5rkq3454kh4d749nkvljfbsp2d52.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.studentsmanagement_net1728_se171060",
-            "certificate_hash": "1489af1da0d7c694e50d74f3f868e4a63eba17ba"
+            "certificate_hash": "ce742c4f0c9a5e963808fc046e918b6b53b84096"
           }
         },
         {
-          "client_id": "846865138855-1lgb9m90li4h3uqeo7cqq7a089h0p77h.apps.googleusercontent.com",
+          "client_id": "12300953490-v9nr4lmihm7litmk02uk9lfklqbsc0hj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDLq0azDOVXYvueDT9qnkhaJSOZ_YMNs34"
+          "current_key": "AIzaSyCIzfTWzMV8vGl718I8pgXcfbYIWprkFfs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "846865138855-1lgb9m90li4h3uqeo7cqq7a089h0p77h.apps.googleusercontent.com",
+              "client_id": "12300953490-v9nr4lmihm7litmk02uk9lfklqbsc0hj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12300953490:android:5a736475fccd3a21a8434b",
+        "android_client_info": {
+          "package_name": "com.example.studentsmanagement_njs1706_se171464"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12300953490-ujet2s8i5nf0gjmtaskh1euj3vtc14kn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studentsmanagement_njs1706_se171464",
+            "certificate_hash": "ce742c4f0c9a5e963808fc046e918b6b53b84096"
+          }
+        },
+        {
+          "client_id": "12300953490-v9nr4lmihm7litmk02uk9lfklqbsc0hj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIzfTWzMV8vGl718I8pgXcfbYIWprkFfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12300953490-v9nr4lmihm7litmk02uk9lfklqbsc0hj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

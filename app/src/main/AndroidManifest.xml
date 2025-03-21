@@ -13,7 +13,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.StudentsManagement_Net1728_SE171060"
+        android:theme="@style/Theme.StudentsManagement_NJS1706_SE171464"
         tools:targetApi="31">
 
         <meta-data
@@ -21,28 +21,28 @@
             android:value="AIzaSyAeVsjVGP3uWRx1qoOgc_1lREVp5HY2i2A" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainCreateActivity"
+            android:name="MainCreateActivity"
             android:exported="false" />
         <activity
-            android:name=".ChildActivity"
+            android:name="ChildActivity"
             android:exported="false" />
         <activity
-            android:name=".MainEditActivity"
+            android:name="MainEditActivity"
             android:exported="false" />
         <activity
-            android:name=".ChildActivityCreate"
+            android:name="ChildActivityCreate"
             android:exported="false" />
         <activity
-            android:name=".ChildActivityEdit"
+            android:name="ChildActivityEdit"
             android:exported="false" />
         <activity
-            android:name=".MapsActivity"
+            android:name="MapsActivity"
             android:exported="false" />
         <activity
-            android:name=".ControlActivity"
+            android:name="ControlActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

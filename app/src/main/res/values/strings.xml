@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">StudentsManagement_NJS1706_SE171464</string>
+    <string name="app_name">SP25_TranDangQuocDat_NJS1706</string>
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
         AIzaSyAeVsjVGP3uWRx1qoOgc_1lREVp5HY2i2A</string>
 </resources>

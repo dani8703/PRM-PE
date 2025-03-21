@@ -3,17 +3,17 @@ package com.example.sp25_trandangquocdat_njs1706.data;
 
 import com.example.sp25_trandangquocdat_njs1706.db.AppDatabase;
 import com.example.sp25_trandangquocdat_njs1706.excutors.AppExecutors;
-import com.example.sp25_trandangquocdat_njs1706.model.Student;
-import com.example.sp25_trandangquocdat_njs1706.model.Major;
+import com.example.sp25_trandangquocdat_njs1706.model.Author;
+import com.example.sp25_trandangquocdat_njs1706.model.Book;
 
 public class GlobalData {
     private static GlobalData instance;
 
-    private Student student;
+    private Author author;
     private AppDatabase appDatabase;
     private GlobalData() {}
-    private GlobalData(Student student) {
-        this.student = student;
+    private GlobalData(Author student) {
+        this.author = student;
     }
 
     public static synchronized GlobalData getInstance() {
@@ -32,35 +32,35 @@ public class GlobalData {
         this.appDatabase = appDatabase;
     }
 
-    public void save(Student student) {
+    public void save(Author author) {
         AppExecutors.getInstance().diskIO().execute(() -> {
-            appDatabase.studentDAO().insert(student);
+            appDatabase.authorDAO().insert(author);
         });
     }
 
-    public void update(Student student) {
+    public void update(Author author) {
         AppExecutors.getInstance().diskIO().execute(() -> {
-            appDatabase.studentDAO().update(student);
+            appDatabase.authorDAO().update(author);
         });
     }
 
-    public void save(Major childModel) {
+    public void save(Book childModel) {
         AppExecutors.getInstance().diskIO().execute(() -> {
-            appDatabase.majorDAO().insert(childModel);
+            appDatabase.bookDAO().insert(childModel);
         });
     }
 
-    public void update(Major childModel) {
+    public void update(Book childModel) {
         AppExecutors.getInstance().diskIO().execute(() -> {
-            appDatabase.majorDAO().update(childModel);
+            appDatabase.bookDAO().update(childModel);
         });
     }
 
-    public Student getStudent() {
-        return student;
+    public Author getAuthor() {
+        return author;
     }
 
-    public void setStudent(Student Student) {
-        this.student = Student;
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 }

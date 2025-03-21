@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/surface"
-            app:title="Student Management"
+            app:title="Author Management"
             app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge"
             app:titleCentered="true"
             app:titleTextColor="@color/primary"
@@ -58,7 +58,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Students List"
+                        android:text="Authors List"
                         android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
                         android:textColor="@color/primary"
                         android:layout_marginBottom="16dp"/>
@@ -84,7 +84,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginBottom="88dp"
         android:layout_marginEnd="16dp"
-        android:text="Add Student"
+        android:text="Add Author"
         android:textColor="@color/white"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"

@@ -17,10 +17,10 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/txtMajorLabel"
+            android:id="@+id/txtBookLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Major"
+            android:text="Book Title"
             android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
             android:textColor="@color/text_secondary"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,12 +32,84 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="16dp"
-            android:text="Major Name"
+            android:text="Book Title"
             android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
             android:textColor="@color/on_surface"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/imgDeleteMajor"
-            app:layout_constraintTop_toBottomOf="@id/txtMajorLabel"/>
+            app:layout_constraintTop_toBottomOf="@id/txtBookLabel"/>
+            
+        <TextView
+            android:id="@+id/txtTypeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtMajorName"/>
+            
+        <TextView
+            android:id="@+id/txtType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Book Type"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="@color/on_surface"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imgDeleteMajor"
+            app:layout_constraintTop_toBottomOf="@id/txtTypeLabel"/>
+            
+        <TextView
+            android:id="@+id/txtPublicationDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publication Date"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtType"/>
+            
+        <TextView
+            android:id="@+id/txtPublicationDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Publication Date"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="@color/on_surface"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imgDeleteMajor"
+            app:layout_constraintTop_toBottomOf="@id/txtPublicationDateLabel"/>
+            
+        <TextView
+            android:id="@+id/txtAuthorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Author"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.Material3.LabelMedium"
+            android:textColor="@color/text_secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtPublicationDate"/>
+            
+        <TextView
+            android:id="@+id/txtAuthor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:text="Author Name"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="@color/on_surface"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imgDeleteMajor"
+            app:layout_constraintTop_toBottomOf="@id/txtAuthorLabel"/>
 
         <ImageView
             android:id="@+id/imgDeleteMajor"
@@ -47,8 +119,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="2dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/surface"
-            app:title="Add New Major"
+            app:title="Add New Book"
             app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge"
             app:titleCentered="true"
             app:titleTextColor="@color/primary"
@@ -52,7 +52,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Major Name"
+                    android:hint="Book Title"
                     app:startIconDrawable="@android:drawable/ic_menu_edit"
                     app:startIconTint="@color/primary"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -62,6 +62,57 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Publication Date"
+                    android:layout_marginTop="16dp"
+                    app:startIconDrawable="@android:drawable/ic_menu_my_calendar"
+                    app:startIconTint="@color/primary"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edPublicationDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Book Type"
+                    android:layout_marginTop="16dp"
+                    app:startIconDrawable="@android:drawable/ic_menu_sort_by_size"
+                    app:startIconTint="@color/primary"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Author"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    app:startIconDrawable="@android:drawable/ic_menu_myplaces"
+                    app:startIconTint="@color/primary">
+
+                    <Spinner
+                        android:id="@+id/spinnerAuthor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 

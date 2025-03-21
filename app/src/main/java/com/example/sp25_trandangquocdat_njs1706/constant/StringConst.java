@@ -1,9 +1,9 @@
 package com.example.sp25_trandangquocdat_njs1706.constant;
 
 public class StringConst {
-    public static String DBNAME = "pe-database-su2024";
-    public static String PutExtraNameMain = "student";
-    public static String PutExtraNameChild = "major";
+    public static String DBNAME = "pe-database-sp2025";
+    public static String PutExtraNameMain = "author";
+    public static String PutExtraNameChild = "book";
     public static String Male = "Male";
     public static String Female = "Female";
 

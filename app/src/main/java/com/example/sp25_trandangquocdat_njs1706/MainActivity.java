@@ -15,14 +15,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
-import com.example.sp25_trandangquocdat_njs1706.R;
-import com.example.sp25_trandangquocdat_njs1706.adapter.StudentAdapter;
+import com.example.sp25_trandangquocdat_njs1706.adapter.AuthorAdapter;
 import com.example.sp25_trandangquocdat_njs1706.constant.StringConst;
 import com.example.sp25_trandangquocdat_njs1706.data.GlobalData;
 import com.example.sp25_trandangquocdat_njs1706.db.AppDatabase;
 import com.example.sp25_trandangquocdat_njs1706.excutors.AppExecutors;
-import com.example.sp25_trandangquocdat_njs1706.model.Student;
-import com.example.sp25_trandangquocdat_njs1706.model.Major;
+import com.example.sp25_trandangquocdat_njs1706.model.Author;
+import com.example.sp25_trandangquocdat_njs1706.model.Book;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -39,10 +38,10 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private AppDatabase appDatabase;
-    private List<Student> list;
-    private List<Major> childList;
-    private RecyclerView rvStudent;
-    private StudentAdapter adapter;
+    private List<Author> list;
+    private List<Book> childList;
+    private RecyclerView rvAuthor;
+    private AuthorAdapter adapter;
     private ExtendedFloatingActionButton btnNew;
     private MaterialToolbar topAppBar;
     private static final String PREF_NAME = "AppPrefs";
@@ -92,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        rvStudent = findViewById(R.id.rvStudent);
+        rvAuthor = findViewById(R.id.rvStudent);
         btnNew = findViewById(R.id.btnNew);
 
         appDatabase = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, StringConst.DBNAME).build();
@@ -106,20 +105,20 @@ public class MainActivity extends AppCompatActivity {
         AppExecutors.getInstance().diskIO().execute(() -> {
             if (!isDbInitialized) {
                 // Xóa dữ liệu cũ
-                appDatabase.studentDAO().deleteAll();
-                appDatabase.majorDAO().deleteAll();
+                appDatabase.authorDAO().deleteAll();
+                appDatabase.bookDAO().deleteAll();
 
-                // Chèn dữ liệu mới cho Major
-                appDatabase.majorDAO().insert(new Major("Software Engineering"));
-                appDatabase.majorDAO().insert(new Major("Computer Science"));
-                appDatabase.majorDAO().insert(new Major("Information Technology"));
+                // Chèn dữ liệu mới cho Author
+                appDatabase.authorDAO()
+                        .insert(new Author("Nguyen Van A", "nguyenvana@gmail.com", "0123456789", "Ha Noi"));
+                appDatabase.authorDAO()
+                        .insert(new Author("Tran Thi B", "tranthib@gmail.com", "0987654321", "HCM City"));
+                appDatabase.authorDAO().insert(new Author("Le Van C", "levanc@gmail.com", "0123456789", "Da Nang"));
 
-                // Chèn dữ liệu mới cho Student
-                // Lưu ý: Cần thay đổi constructor của Student cho phù hợp
-                appDatabase.studentDAO().insert(
-                        new Student("Nguyen Van B", "2003-01-01", "Male", "nguyenvanb@fpt.edu.vn", "Ha Noi", 1));
-                appDatabase.studentDAO().insert(
-                        new Student("Nguyen Van A", "2002-02-02", "Male", "nguyenvana@gmail.com", "HCM City", 2));
+                // Chèn dữ liệu mới cho Book
+                appDatabase.bookDAO().insert(new Book("Java Programming", "2021-10-15", "Programming", 1));
+                appDatabase.bookDAO().insert(new Book("Android Development", "2022-05-20", "Technology", 1));
+                appDatabase.bookDAO().insert(new Book("Machine Learning Basics", "2023-01-10", "AI", 2));
 
                 // Đánh dấu là đã khởi tạo
                 SharedPreferences.Editor editor = prefs.edit();
@@ -130,13 +129,13 @@ public class MainActivity extends AppCompatActivity {
                         .makeText(MainActivity.this, "Database initialized with new data", Toast.LENGTH_SHORT).show());
             }
 
-            list = appDatabase.studentDAO().getAll();
-            childList = appDatabase.majorDAO().getAll();
+            list = appDatabase.authorDAO().getAll();
+            childList = appDatabase.bookDAO().getAll();
 
             runOnUiThread(() -> {
-                adapter = new StudentAdapter(list, childList, MainActivity.this);
-                rvStudent.setAdapter(adapter);
-                rvStudent.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+                adapter = new AuthorAdapter(list, childList, MainActivity.this);
+                rvAuthor.setAdapter(adapter);
+                rvAuthor.setLayoutManager(new LinearLayoutManager(MainActivity.this));
                 initEventListeners();
             });
         });
@@ -149,10 +148,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        adapter.setOnItemClickListener(new StudentAdapter.OnItemClickListener() {
+        adapter.setOnItemClickListener(new AuthorAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                View currentView = rvStudent.getChildAt(position);
+                View currentView = rvAuthor.getChildAt(position);
                 currentView.setBackgroundColor(Color.parseColor("#CD8484"));
                 Intent intent = new Intent(MainActivity.this, MainEditActivity.class);
                 intent.putExtra(StringConst.PutExtraNameMain, (Serializable) list.get(position));
